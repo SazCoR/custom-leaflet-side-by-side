@@ -126,7 +126,7 @@ L.Control.SideBySide = L.Control.extend({
     var dividerX = this.getPosition();
 
     this._divider.style.left = dividerX + 'px';
-    this.fire('dividermove', { x: dividerX });
+    this.fireEvent('dividermove', { x: dividerX });
     var clipLeft = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
     var clipRight = 'rect(' + [nw.y, se.x, se.y, clipX].join('px,') + 'px)';
 
@@ -177,12 +177,12 @@ L.Control.SideBySide = L.Control.extend({
     }, this);
 
     if (prevLeft !== this._leftLayer) {
-      if (prevLeft) this.fire('leftlayerremove', { layer: prevLeft });
-      if (this._leftLayer) this.fire('leftlayeradd', { layer: this._leftLayer });
+      if (prevLeft) this.fireEvent('leftlayerremove', { layer: prevLeft });
+      if (this._leftLayer) this.fireEvent('leftlayeradd', { layer: this._leftLayer });
     }
     if (prevRight !== this._rightLayer) {
-      if (prevRight) this.fire('rightlayerremove', { layer: prevRight });
-      if (this._rightLayer) this.fire('rightlayeradd', { layer: this._rightLayer });
+      if (prevRight) this.fireEvent('rightlayerremove', { layer: prevRight });
+      if (this._rightLayer) this.fireEvent('rightlayeradd', { layer: this._rightLayer });
     }
     this._updateClip();
   },
