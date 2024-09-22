@@ -40,7 +40,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digidem/leaflet-side-by-side.git"
+    "url": "git+https://github.com/SazCoR/custom-leaflet-side-by-side.git"
   },
   "bugs": {
     "url": "https://github.com/digidem/leaflet-side-by-side/issues"
